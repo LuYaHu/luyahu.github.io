@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="后端目前进度后端数据库开发目前已开发完成数据库的基础框架总共分为三个部分Django框架为四个部分，分别为takeout_01主框架，其他分为三个APP 第一个是product APP里面数据库内包含的信息为产品的信息 1234567891011121314151617from xmlrpc.client import Booleanfrom django.db import models# Cr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后端开发文档">
+<meta property="og:url" content="http://example.com/2022/04/13/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="一路随行的知识散播地">
+<meta property="og:description" content="后端目前进度后端数据库开发目前已开发完成数据库的基础框架总共分为三个部分Django框架为四个部分，分别为takeout_01主框架，其他分为三个APP 第一个是product APP里面数据库内包含的信息为产品的信息 1234567891011121314151617from xmlrpc.client import Booleanfrom django.db import models# Cr">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-13T15:15:16.000Z">
+<meta property="article:modified_time" content="2022-04-14T10:09:22.615Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>后端开发文档 - 一路随行的知识散播地</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/background1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="后端开发文档">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-13 11:15" pubdate>
+        2022年4月13日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      54 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">后端开发文档</h1>
+            
+            <div class="markdown-body">
+              <h1 id="后端目前进度"><a href="#后端目前进度" class="headerlink" title="后端目前进度"></a>后端目前进度</h1><h2 id="后端数据库开发"><a href="#后端数据库开发" class="headerlink" title="后端数据库开发"></a>后端数据库开发</h2><p>目前已开发完成数据库的基础框架<br>总共分为三个部分<br>Django框架为四个部分，分别为takeout_01主框架，其他分为三个APP</p>
+<h3 id="第一个是product-APP"><a href="#第一个是product-APP" class="headerlink" title="第一个是product APP"></a>第一个是product APP</h3><p>里面数据库内包含的信息为产品的信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> xmlrpc.client <span class="hljs-keyword">import</span> Boolean<br><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models<br><br><span class="hljs-comment"># Create your models here.</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Product</span>(models.Model):<br>    product_name = models.CharField(<span class="hljs-string">&quot;产品名&quot;</span>,max_length=<span class="hljs-number">50</span>,default=<span class="hljs-string">&#x27;&#x27;</span>,unique=<span class="hljs-literal">True</span>);<br>    price = models.DecimalField(<span class="hljs-string">&quot;定价&quot;</span>,max_digits=<span class="hljs-number">7</span>,decimal_places=<span class="hljs-number">2</span>,default=<span class="hljs-number">0.0</span>)<br>    market_price = models.DecimalField(<span class="hljs-string">&quot;零售价&quot;</span>,max_digits=<span class="hljs-number">7</span>,decimal_places=<span class="hljs-number">2</span>,default=<span class="hljs-number">0.0</span>)<br>    is_active = models.BooleanField(<span class="hljs-string">&quot;是否在售&quot;</span>,default=<span class="hljs-literal">True</span>)<br>    saler_id = models.IntegerField(<span class="hljs-string">&quot;商家ID&quot;</span>,default=<span class="hljs-number">1</span>)<br>    sort = models.CharField(<span class="hljs-string">&quot;产品分类&quot;</span>,max_length=<span class="hljs-number">50</span>,default=<span class="hljs-string">&quot;&quot;</span>)<br>    describation = models.TextField(<span class="hljs-string">&quot;描述&quot;</span>,max_length = <span class="hljs-number">288</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Meta</span>:<br>        db_table = <span class="hljs-string">&#x27;product&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;name is %s price is %s market_price is %s&#x27;</span>%(self.name,self.price,self.market_price)<br>            <br></code></pre></td></tr></table></figure>
+<h3 id="第二个是shopping-APP"><a href="#第二个是shopping-APP" class="headerlink" title="第二个是shopping APP"></a>第二个是shopping APP</h3><p>里面数据库内包含的信息为当前购物产品的信息<br>具体描述如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models<br><br><span class="hljs-comment"># Create your models here.</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">UserAddressInfo</span>(models.Model):<br>    province = models.CharField(<span class="hljs-string">&quot;省份&quot;</span>,max_length=<span class="hljs-number">50</span>,default=<span class="hljs-string">&quot;浙江&quot;</span>)<br>    city = models.CharField(<span class="hljs-string">&quot;城市&quot;</span>,max_length=<span class="hljs-number">50</span>,default=<span class="hljs-string">&quot;杭州&quot;</span>)<br>    address = models.CharField(<span class="hljs-string">&quot;地址&quot;</span>,max_length=<span class="hljs-number">100</span>,default=<span class="hljs-string">&quot;浙江工商大学&quot;</span>)<br>    date = models.DateField(auto_now_add = <span class="hljs-literal">True</span>)<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Book_Info</span>(models.Model):<br>    remark = models.CharField(<span class="hljs-string">&quot;评论&quot;</span>,max_length=<span class="hljs-number">100</span>)<br>    sale = models.DecimalField(<span class="hljs-string">&quot;售价&quot;</span>,max_digits=<span class="hljs-number">11</span>,decimal_places=<span class="hljs-number">2</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    address = models.CharField(<span class="hljs-string">&quot;地址&quot;</span>,max_length=<span class="hljs-number">50</span>)<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">shopping_cart</span>(models.Model):<br>    product_name = models.CharField(<span class="hljs-string">&quot;外卖名字&quot;</span>,max_length=<span class="hljs-number">50</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    delivery_info = models.BooleanField(<span class="hljs-string">&quot;是否到达&quot;</span>,default=<span class="hljs-literal">False</span>)<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Info_deliver</span>(models.Model):<br>    advertise = models.TextField(<span class="hljs-string">&quot;推荐广告&quot;</span>,max_length=<span class="hljs-number">200</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GetAddress</span>(models.Model):<br>    address = models.CharField(<span class="hljs-string">&quot;地址&quot;</span>,max_length=<span class="hljs-number">50</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    phone_number = models.CharField(<span class="hljs-string">&quot;买家电话号码&quot;</span>,max_length=<span class="hljs-number">11</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    name = models.CharField(<span class="hljs-string">&quot;买家名字&quot;</span>,max_length=<span class="hljs-number">20</span>,default=<span class="hljs-string">&#x27;&#x27;</span>) <br></code></pre></td></tr></table></figure>
+<h3 id="第三个是user-APP"><a href="#第三个是user-APP" class="headerlink" title="第三个是user APP"></a>第三个是user APP</h3><p>里面数据库内包含的信息为用户的信息<br>具体描述如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models<br><br><span class="hljs-comment"># Create your models here.</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">UserInfo</span>(models.Model):<br>    <span class="hljs-comment"># CharField类型不能为空,最少要指定一个长度</span><br>    <span class="hljs-comment">#DecimialField表示浮点型数，max_digits表示小数点前最大位数，decimal_places表示小数点后最多位数，并且必须指派一个默认值</span><br>    user_name = models.CharField(max_length=<span class="hljs-number">32</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    email = models.EmailField(max_length=<span class="hljs-number">32</span>)<br>    pwd = models.CharField(max_length=<span class="hljs-number">32</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br>    phone = models.IntegerField(default=<span class="hljs-number">0</span>)<br>    nickname = models.CharField(max_length=<span class="hljs-number">20</span>,default=<span class="hljs-string">&#x27;&#x27;</span>)<br><br>    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Meta</span>:<br>        db_table = <span class="hljs-string">&#x27;userinfo&#x27;</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;user_name is %s email is %s phone is %f&#x27;</span>%(self.user_name,self.email,self.phone)<br></code></pre></td></tr></table></figure>
+<h2 id="后端调试"><a href="#后端调试" class="headerlink" title="后端调试"></a>后端调试</h2><p>目前已在view模块实现get和post请求<br>通过postman成功调试了get和post请求，并成功返回了数据<br>计划在接下来与前端进行接口上的测试<br>目前已写好以下几个接口的调通</p>
+<h3 id="Product-App中的views"><a href="#Product-App中的views" class="headerlink" title="Product App中的views"></a>Product App中的views</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs python"><br>m django.shortcuts <span class="hljs-keyword">import</span> render<br><span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse,HttpResponseRedirect<br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> *<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">update_useraddress</span>(<span class="hljs-params">request, user_address_id</span>):<br>    <span class="hljs-keyword">try</span>:<br>        user_address = UserAddressInfo.objects.get(<span class="hljs-built_in">id</span> = user_address_id, is_active = <span class="hljs-literal">True</span> )<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;--update useraddress is %s&#x27;</span>%(e))<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;--The user_address is not existed&#x27;</span>)<br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        <span class="hljs-keyword">pass</span><span class="hljs-comment">#暂时先这样,待会修改</span><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:<br>        province = request.POST[<span class="hljs-string">&#x27;province&#x27;</span>]<br>        city = request.POST[<span class="hljs-string">&#x27;city&#x27;</span>]<br>        address = request.POST[<span class="hljs-string">&#x27;address&#x27;</span>]<br>        <span class="hljs-built_in">print</span>(province,city,address)<br>        user_address.province = request.POST[<span class="hljs-string">&#x27;province&#x27;</span>]<br>        user_address.city= request.POST[<span class="hljs-string">&#x27;city&#x27;</span>]<br>        user_address.address= request.POST[<span class="hljs-string">&#x27;address&#x27;</span>]<br>        user_address.save()<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;改变成功&quot;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">delete_useraddress</span>(<span class="hljs-params">request</span>):<br>    user_address_id = request.GET.get(<span class="hljs-string">&#x27;user_address_id&#x27;</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> user_address_id:<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;请求异常&quot;</span>)<br>    <span class="hljs-keyword">try</span>:<br>        user_address= user_address.objects.get(<span class="hljs-built_in">id</span>=user_address_id,is_active=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;----delete book get error is %s&#x27;</span>%(e))<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;---The book id is error&#x27;</span>)<br>    user_address.is_active=<span class="hljs-literal">False</span><br>    user_address.save()<br>    <span class="hljs-comment">#暂时先这样</span><br>    <span class="hljs-keyword">pass</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">update_book</span>(<span class="hljs-params">request, book_id</span>):<br>    <span class="hljs-keyword">try</span>:<br>        book = Book_Info.objects.get(<span class="hljs-built_in">id</span> = book_id, is_active = <span class="hljs-literal">True</span> )<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;--update useraddress is %s&#x27;</span>%(e))<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;--The book is not existed&#x27;</span>)<br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        <span class="hljs-keyword">pass</span><span class="hljs-comment">#暂时先这样,待会修改</span><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:<br>        remark = request.POST[<span class="hljs-string">&#x27;remark&#x27;</span>]<br>        sale = request.POST[<span class="hljs-string">&#x27;sale&#x27;</span>]<br>        address = request.POST[<span class="hljs-string">&#x27;address&#x27;</span>]<br>        <span class="hljs-built_in">print</span>(remark,sale,address)<br>        book.remark = request.POST[<span class="hljs-string">&#x27;remark&#x27;</span>]<br>        book.sale= request.POST[<span class="hljs-string">&#x27;sale&#x27;</span>]<br>        book.address= request.POST[<span class="hljs-string">&#x27;address&#x27;</span>]<br>        book.save()<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;改变成功&quot;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">delete_book</span>(<span class="hljs-params">request</span>):<br>    book_id = request.GET.get(<span class="hljs-string">&#x27;book_id&#x27;</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> book_id:<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;请求异常&quot;</span>)<br>    <span class="hljs-keyword">try</span>:<br>        book= Book_Info.objects.get(<span class="hljs-built_in">id</span>=book_id,is_active=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;----delete book get error is %s&#x27;</span>%(e))<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;---The book id is error&#x27;</span>)<br>    book.is_active=<span class="hljs-literal">False</span><br>    book.save()<br>    <span class="hljs-comment">#暂时先这样</span><br></code></pre></td></tr></table></figure>
+<h3 id="shopping中的APP"><a href="#shopping中的APP" class="headerlink" title="shopping中的APP"></a>shopping中的APP</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs python">            <br><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render<br><span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse,HttpResponseRedirect<br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Product<br><br><span class="hljs-comment"># Create your views here.</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">all_product</span>(<span class="hljs-params">request</span>):<br><br>    all_product= Product.objects.<span class="hljs-built_in">filter</span>(is_active=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&#x27;product/all_product.html&#x27;</span>,<span class="hljs-built_in">locals</span>())<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">update_product</span>(<span class="hljs-params">request,product_id</span>):<br>    <span class="hljs-keyword">try</span>:<br>        product =  Product.objects.get(<span class="hljs-built_in">id</span>=product_id,is_active=<span class="hljs-literal">True</span>);<br>    <br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;--update product error is %s&#x27;</span>%(e))<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;--The product is not existed&#x27;</span>)<br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        <span class="hljs-keyword">pass</span><br>        <span class="hljs-comment">#暂时先这样</span><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:<br>        price = request.POST[<span class="hljs-string">&#x27;price&#x27;</span>]<br>        <span class="hljs-built_in">print</span>(price)<br>        market_price = request.POST[<span class="hljs-string">&#x27;price&#x27;</span>]<br>        <span class="hljs-built_in">print</span>(market_price)<br>        product.price = price<br>        product.market_price = market_price<br>        product.save()<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;change successfully&#x27;</span>) <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">delete_product</span>(<span class="hljs-params">request</span>):<br>    product_id = request.GET.get(<span class="hljs-string">&#x27;product_id&#x27;</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> product_id:<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;请求异常&quot;</span>)<br>    <span class="hljs-keyword">try</span>:<br>        product= Product.objects.get(<span class="hljs-built_in">id</span>=product_id,is_active=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;----delete book get error is %s&#x27;</span>%(e))<br>        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&#x27;---The book id is error&#x27;</span>)<br>    product.is_active=<span class="hljs-literal">False</span><br>    product.save()<br>    <span class="hljs-keyword">pass</span><br></code></pre></td></tr></table></figure>
+<h2 id="这是调试成功的界面，当然，这会演示出来"><a href="#这是调试成功的界面，当然，这会演示出来" class="headerlink" title="这是调试成功的界面，当然，这会演示出来"></a>这是调试成功的界面，当然，这会演示出来</h2>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/08/Django-ORM%E6%93%8D%E4%BD%9C/">
+                        <span class="hidden-mobile">Django ORM操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+  <!--动态线条背景-->
+  
+  <script type="text/javascript"
+  color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+</body>
+</html>
